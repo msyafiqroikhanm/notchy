@@ -1,0 +1,26 @@
+import Foundation
+
+func runSelfTests() throws {
+    try ShellMotion.selftest()
+    print("PASS shell geometry, spring reversals, camera clearance and silhouette")
+    try WidgetWeek.selftest()
+    print("PASS local widget week, DST, due dates and ordering")
+    try MediaController.selftest()
+    print("PASS media fragmented records, state replacement and timing")
+    try LyricsController.selftest()
+    print("PASS lyrics timestamps and offsets")
+    try FocusController.selftest()
+    print("PASS focus deadlines and safe persistence")
+    try TaskController.selftest()
+    print("PASS task reminder once and rearm")
+    try WaterController.selftest()
+    print("PASS water midnight and reminder coalescing")
+    try ShelfController.selftest()
+    print("PASS shelf references preserve files")
+    try ClipboardController.selftest()
+    print("PASS clipboard privacy policy")
+    try PrayerController.selftest()
+    print("PASS prayer solar reference, boundaries and reminders")
+    try DeviceMonitor.selftest()
+    print("PASS device transitions")
+}
